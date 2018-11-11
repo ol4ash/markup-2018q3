@@ -1,21 +1,18 @@
 
-
-setTimeout(function(){show();}, 0);
-
+if (window.localStorage.getItem('notshow')===null){
+	setTimeout(function(){show();},2000);}
 var show = function() {
-    return document.getElementById("mydiv").className = "notificationVisible"
+	window.localStorage.removeItem('notshow');
+    return document.getElementById("mydiv").className = "notificationVisible";
     }
 var hide = function() {
-    return document.getElementById("mydiv").className = "notification"
+    return document.getElementById("mydiv").className = "notification";
     }
 var check = function(){
-	document.getElementById("check").className = "checkon"
-	return  setTimeout(function(){hide();}, 200);
+	document.getElementById("check").className = "checkon";
+	window.localStorage.setItem('notshow', null);
 }
-
-
 let idArr=["circle1","circle2","circle3","circle4","circle5"]
-
 var previous = function(){
 	let active = document.querySelector('.circleon').id;
 	let a=idArr.indexOf(active);
@@ -25,9 +22,7 @@ var previous = function(){
 	if (a===0){document.getElementById(idArr[0]).className = "circleon"}
 	else {document.getElementById(idArr[a-1]).className = "circleon"
 		  document.getElementById("text").innerHTML = arr[a-1];}
-
 }
-
 var next = function(){
 	let active = document.querySelector('.circleon').id;
 	let a=idArr.indexOf(active);
@@ -38,20 +33,6 @@ var next = function(){
 	else {document.getElementById(idArr[a+1]).className = "circleon";
 	      document.getElementById("text").innerHTML = arr[a+1];}
 }
-
-
-
-// let ids = document.getElementsByClassName("circle");
-// let idsarr=
-
-// // var ids = [].map.call(vehicles, function(elem) {
-// //   return elem.id;  
-// // });
-// //console.log(arrCircles);
-// console.log(ids);
-// console.log(idsarr);
-
-
 var select = function(selected_id) {
 	for (let i=0; i<idArr.length; i++){
 		document.getElementById(idArr[i]).className = "circle"
@@ -60,20 +41,13 @@ var select = function(selected_id) {
 	var a=idArr.indexOf(selected_id);
 	document.getElementById("text").innerHTML = arr[a];
 }
-
-
-
-
-
-
-	//return ("circle1").className = "circleon"
-
-
-
-
-
-
-
+list= function(){
+	let k = event.which;
+	console.log(k)
+	if (k===39){next()}
+	if (k===37){previous()}
+	if (k===27){hide()}
+}
 var arr = [
 "Ten little Indian boys went out to dine;<br>One choked his little self and then there were nine.Nine little Indian boys sat up very late;<br>One overslept himself and then there were eight.",
 "Eight little Indian boys travelling in Devon; <br>One said he'd stay there and then there were seven.Seven little Indian boys chopping up sticks;<br>One chopped himself in halves and then there were six.",

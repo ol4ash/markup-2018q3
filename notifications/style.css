@@ -2,9 +2,21 @@
 	font-family: 'Cabin', sans-serif;
 	font-weight:400;
 }
-
 body {
 	background: dodgerblue;
+}
+.showagain{
+	display:none;
+}
+.showagainon {
+	top: 30px;
+	border-radius: 2px;
+	right:30px;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	background: white;
+	opacity: 0.5;
 }
 .numbers {
 	position: absolute;
@@ -22,11 +34,9 @@ h2 {
 	color: white;
 	text-align:center;
 }
-
 .notification { 
 	display: none;
 }
-
 .notificationVisible{
 	display: block;
 	position: fixed;
@@ -38,7 +48,7 @@ h2 {
 	right: 20px;
 	border-radius: 8px;
 	box-shadow: 0px 8px 14px -4px #166bbe;
-	opacity:0.94;
+	opacity:0.96;
 }
 h3{
 	margin: 28px 0 15px 0;
@@ -71,12 +81,10 @@ p{
 	top: 12px;
 	font-size: 18px;
 	color: #c6c6c6;
-
 }
 .close :hover{
 	color: #9c9c9c;
 }
-
 .container {
 	position: absolute;
 	top:210px;
@@ -120,7 +128,6 @@ input:checked ~ .checkmark {
 	color:white;
 	font-size: 13px;
 }
-
 .list {
 	position: absolute;
 	height: 30px;
@@ -172,7 +179,6 @@ ul {
 	color:#9c9c9c;
 	border-color: #9c9c9c;
 }
-
 .circleon {
 	display: block;
 	height:20px;

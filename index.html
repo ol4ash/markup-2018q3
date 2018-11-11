@@ -7,30 +7,25 @@
 <script type="text/javascript" src="notifications/notify.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600" rel="stylesheet">
-
-
 </head>
 
-
-<body>
-
-  <div id="mydiv" class="notification">
+<body onkeydown="list()">
+  <div id="showagain" class="showagainon" onmouseup="show()"></div>
+  <div id="mydiv" class="notification" >
     <div class="close" onmouseup="hide()"><i class="fas fa-times"></i></div>
     <div class="textcontainer">
       <h3>Tips of the day:</h3>
       <p id="text">Ten little Indian boys went out to dine;<br>One choked his little self and then there were nine.Nine little Indian boys sat up very late;<br>One overslept himself and then there were eight.</p>
     </div>
-  
     <label class="container">
       <input type="checkbox" name="ask" value="dont">Disable Tips
       <div class="checkmark" onmouseup="check()">
         <span id="check" class="check"><i class="fas fa-check"></i> </span>
       </div>
     </label>
- 
     <div class="list"> 
       <ul>
-        <li class="arrow" onmouseup="previous()"><span class="left"><i class="fas fa-caret-left"></i></span></li>
+        <li class="arrow" onmouseup="previous()" ><span class="left"><i class="fas fa-caret-left"></i></span></li>
         <li id="circle1" class="circleon" onmousedown="select(this.id)"><i class="fas fa-circle"></i></li>
         <li id="circle2" class="circle" onmousedown="select(this.id)"><i class="fas fa-circle"></i></li>
         <li id="circle3" class="circle" onmousedown="select(this.id)"><i class="fas fa-circle"></i></li>
@@ -40,16 +35,12 @@
       </ul>
     </div>  
    </div>
-
-<div class="numbers">
-<h2>5</h2>
-<h2>4</h2>
-<h2>3</h2>
-<h2>2</h2>
-<h2>1</h2>
-</div>
-
+  <div class="numbers">
+    <h2>5</h2>
+    <h2>4</h2>
+    <h2>3</h2>
+    <h2>2</h2>
+    <h2>1</h2>
+  </div>
 </body>
-
-
 </html>
