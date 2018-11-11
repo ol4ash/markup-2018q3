@@ -1,0 +1,190 @@
+* {
+	font-family: 'Cabin', sans-serif;
+	font-weight:400;
+}
+body {
+	background: dodgerblue;
+}
+.showagain{
+	display:none;
+}
+.showagainon {
+	top: 30px;
+	border-radius: 2px;
+	right:30px;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	background: white;
+	opacity: 0.5;
+}
+.numbers {
+	position: absolute;
+    width:100%;
+    margin-top: 100px;
+}
+h2 {
+	display: block;
+	position: relative;
+	width:100%;
+	height: 300px;
+	font-size: 120px;
+	font-family: "Georgia";
+	font-weight: 100;
+	color: white;
+	text-align:center;
+}
+.notification { 
+	display: none;
+}
+.notificationVisible{
+	display: block;
+	position: fixed;
+	z-index:10;
+	height: 250px;
+	width: 400px;
+	background:white;
+	top:20px;
+	right: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 8px 14px -4px #166bbe;
+	opacity:0.96;
+}
+h3{
+	margin: 28px 0 15px 0;
+	color: #555;
+	font-size: 21px;
+	text-transform: uppercase;
+	padding-left: 20px;
+}
+p{  
+	display: block;
+	position: absolute;
+	top:70px;
+	width:85%;
+	height:110px;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #4f4f4f;
+	margin: 0;
+}
+.textcontainer{
+	width:85%;
+	padding-left: 30px;
+}
+.close{
+	display: block;
+	position: absolute;
+	text-align:right;
+	right: 16px;
+	top: 12px;
+	font-size: 18px;
+	color: #c6c6c6;
+}
+.close :hover{
+	color: #9c9c9c;
+}
+.container {
+	position: absolute;
+	top:210px;
+	left: 20px;
+	height: 30px;
+	width:30%;
+	padding-left: 30px;
+    font-size: 14px;
+    color: #7f7f7f;
+}
+.container input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    height: 17px;
+    width: 17px;
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #bebebe;
+}
+input ~ .checkmark:hover{
+    background-color: #ddd;
+}
+input:checked ~ .checkmark {
+    background-color: #61b2ff;
+    opacity:70;
+}
+.check {
+	display: none;
+}
+.checkon {
+	display: block;
+	position: absolute;
+	margin: auto auto auto 2px;
+	color:white;
+	font-size: 13px;
+}
+.list {
+	position: absolute;
+	height: 30px;
+	width: 140px;
+	left:220px;
+	top:210px;
+}
+ul {
+	display:flex;
+	justify-content: space-between;
+	position: absolute;
+	margin: 0;
+	padding-left: 0;
+	height: 100%;
+	width: 100%;
+	list-style: none;
+}
+.arrow {
+	display: block;
+	height:22px;
+	width: 22px;
+	border: 1px solid #d9d9d9;
+	border-radius: 11px;
+}
+.right, .left {
+	display: block;
+	position: absolute;
+	line-height: 20px;
+	font-size: 20px;
+	padding:0;
+	margin-top: 1px;
+	color:#bbb;
+}
+.right {
+	margin-left:8px;
+}
+.left{
+	margin-left:6px;
+}
+.circle {
+	display: block;
+	height:20px;
+	font-size: 8px;
+	line-height: 8px;
+	margin-top: 7px;
+	color:#d9d9d9;
+}
+.right:hover, .left:hover, .circle:hover, .arrow:hover{
+	color:#9c9c9c;
+	border-color: #9c9c9c;
+}
+.circleon {
+	display: block;
+	height:20px;
+	font-size: 8px;
+	line-height: 8px;
+	margin-top: 7px;
+	color: #61b2ff;
+} 
+
